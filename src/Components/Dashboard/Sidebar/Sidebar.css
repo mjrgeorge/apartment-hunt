@@ -1,0 +1,22 @@
+.sidebar {
+  background-color: #fff;
+}
+
+.sidebar li {
+  margin-bottom: 2em;
+}
+
+.sidebar li:hover span {
+  display: inline-block;
+  -webkit-transform: translate(5px);
+          transform: translate(5px);
+}
+
+.sidebar svg {
+  margin-right: 5px;
+}
+
+.sidebar-pages {
+  height: 100vh;
+}
+/*# sourceMappingURL=Sidebar.css.map */
