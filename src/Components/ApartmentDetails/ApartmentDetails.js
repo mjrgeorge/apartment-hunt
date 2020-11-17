@@ -1,7 +1,6 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useHistory, useParams } from 'react-router-dom';
-import { UserContext } from '../../App';
 import cover from '../../assets/images/cover.png';
 import { loggedInInfo } from '../Login/loginManager';
 import PreLoader from '../PreLoader/PreLoader';
@@ -16,7 +15,7 @@ const ApartmentDetails = () => {
 
   // Get the single Service user clicked from API:
   useEffect(() => {
-    fetch(`https://apartment-hunt-react.herokuapp.com/apartments/${_id}`)
+    fetch(`https://fast-river-62439.herokuapp.com/apartments/${_id}`)
       .then((res) => res.json())
       .then((data) => {
         setSelectedApt(data);
@@ -40,7 +39,7 @@ const ApartmentDetails = () => {
     newHouse.status = 'Pending';
     // newHouse.image = selectedApt.image;
 
-    fetch('https://apartment-hunt-react.herokuapp.com/addRegistration', {
+    fetch('https://fast-river-62439.herokuapp.com/addRegistration', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newHouse),
@@ -78,6 +77,7 @@ const ApartmentDetails = () => {
               <img
                 className='w-100'
                 src={`data:image/png;base64,${selectedApt.image.img}`}
+                alt=""
               />
             ) : (
               <img className='w-100' src={selectedApt.img} alt='' />

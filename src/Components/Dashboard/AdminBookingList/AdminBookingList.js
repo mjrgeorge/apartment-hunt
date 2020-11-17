@@ -15,7 +15,7 @@ const AdminBookingList = () => {
 
   // Get all the Volunteer Register
   useEffect(() => {
-    fetch('https://apartment-hunt-react.herokuapp.com/adminServices')
+    fetch('https://fast-river-62439.herokuapp.com/adminServices')
       .then((res) => res.json())
       .then((data) => {
         setBookingList(data);
@@ -29,7 +29,7 @@ const AdminBookingList = () => {
     console.log(selectBook, 'status', status);
 
     fetch(
-      `https://apartment-hunt-react.herokuapp.com/updateServiceStatus/${data._id}`,
+      `https://fast-river-62439.herokuapp.com/updateServiceStatus/${data._id}`,
       {
         method: 'PATCH',
         headers: {

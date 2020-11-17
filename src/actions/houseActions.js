@@ -10,7 +10,7 @@ import {HOUSE_LIST_REQUEST,
           dispatch({ type: HOUSE_LIST_REQUEST })
       
           const { data } = await axios.get(
-            `https://apartment-hunt-react.herokuapp.com/apartments`
+            `https://fast-river-62439.herokuapp.com/apartments`
           )
       
           dispatch({

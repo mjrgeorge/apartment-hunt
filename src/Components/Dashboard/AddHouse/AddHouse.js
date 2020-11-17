@@ -38,7 +38,7 @@ const info ={...data}
     formData.append('property_details', info.property_details);
     formData.append('price', houseInfo.price);
 
-    fetch('https://apartment-hunt-react.herokuapp.com/addHouse', {
+    fetch('https://fast-river-62439.herokuapp.com/addHouse', {
       method: 'POST',
       body: formData,
     })
